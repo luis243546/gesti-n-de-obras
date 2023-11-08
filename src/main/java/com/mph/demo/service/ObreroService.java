@@ -1,8 +1,10 @@
 package com.mph.demo.service;
 
-import com.mph.demo.entity.Obrero;
+import org.springframework.stereotype.Service;
 import com.mph.demo.shared.BaseService;
+import com.mph.demo.entity.Obrero;
 
-public class ObreroService extends BaseService<Obrero>{
+@Service
+public class ObreroService extends BaseService<Obrero> {
 
 }

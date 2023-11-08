@@ -13,8 +13,7 @@ import lombok.Setter;
 @Entity
 @Table(name="tipo_de_obra")
 @NoArgsConstructor
-public abstract class Tipo_de_Obra extends BaseEntity {
-    
+public class Tipo_de_Obra extends BaseEntity {
     private String nombre;
     private String descripcion;
 }

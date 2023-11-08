@@ -17,7 +17,7 @@ import lombok.Setter;
 @Entity
 @Table(name="obrero")
 @NoArgsConstructor
-public abstract class Obrero extends BaseEntity { 
+public class Obrero extends BaseEntity { 
     private String nombre;
     private String apellidos;
     private String telefono;
@@ -26,5 +26,4 @@ public abstract class Obrero extends BaseEntity {
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "proyecto_id")
     private Proyecto proyecto;
-
 }
