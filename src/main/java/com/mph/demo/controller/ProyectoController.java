@@ -7,35 +7,37 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mph.demo.entity.Obrero;
-import com.mph.demo.service.ObreroService;
+import com.mph.demo.entity.Proyecto;
+import com.mph.demo.service.ProyectoService;
 
 @RestController
-public class ObreroController {
+@RequestMapping("")
+public class ProyectoController {
   @Autowired
-  ObreroService obrero;
+  ProyectoService proyecto;
 
   @PostMapping("/")
-  public Obrero createCase(Obrero caseCreate) {
-    return obrero.create(caseCreate);
+  public Proyecto createCase(Proyecto caseCreate) {
+    return proyecto.create(caseCreate);
   }
 
   @GetMapping("/")
-  public List<Obrero> getCase() {
-    return obrero.getAll();
+  public List<Proyecto> getCase() {
+    return proyecto.getAll();
   }
 
   @GetMapping("{id}")
-  public Obrero getCaseById(@PathVariable Long id) {
-    return obrero.getById(id);
+  public Proyecto getCaseById(@PathVariable Long id) {
+    return proyecto.getById(id);
   }
 
-  
+
 
   @DeleteMapping("{id}")
   public void deleteCaseById(@PathVariable Long id) {
-    obrero.deleteById(id);
+    proyecto.deleteById(id);
   }
 }

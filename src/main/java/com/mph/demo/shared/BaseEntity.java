@@ -17,7 +17,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @MappedSuperclass
-public class BaseEntity {
+public abstract class BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
@@ -39,5 +39,5 @@ public class BaseEntity {
     @PreUpdate
     protected void onUpdate() {
         this.updatedAt = new Date();
-  }
+    }
 }

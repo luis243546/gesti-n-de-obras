@@ -9,33 +9,32 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mph.demo.entity.Obrero;
-import com.mph.demo.service.ObreroService;
-
+import com.mph.demo.entity.Tipo_de_Obra;
+import com.mph.demo.service.Tippo_de_ObraService;
 @RestController
-public class ObreroController {
-  @Autowired
-  ObreroService obrero;
+public class Tipo_de_ObraController {
+    @Autowired
+  Tippo_de_ObraService obra;
 
   @PostMapping("/")
-  public Obrero createCase(Obrero caseCreate) {
-    return obrero.create(caseCreate);
+  public Tipo_de_Obra createCase(Tipo_de_Obra caseCreate) {
+    return obra.create(caseCreate);
   }
 
   @GetMapping("/")
-  public List<Obrero> getCase() {
-    return obrero.getAll();
+  public List<Tipo_de_Obra> getCase() {
+    return obra.getAll();
   }
 
   @GetMapping("{id}")
-  public Obrero getCaseById(@PathVariable Long id) {
-    return obrero.getById(id);
+  public Tipo_de_Obra getCaseById(@PathVariable Long id) {
+    return obra.getById(id);
   }
 
-  
+
 
   @DeleteMapping("{id}")
   public void deleteCaseById(@PathVariable Long id) {
-    obrero.deleteById(id);
+    obra.deleteById(id);
   }
 }
