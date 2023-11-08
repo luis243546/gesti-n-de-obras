@@ -18,7 +18,6 @@ import lombok.Setter;
 @Table(name="proyecto")
 @NoArgsConstructor
 public abstract class Proyecto extends BaseEntity {
-    private int idProyecto;
     private String nombre;
     private String descripcion;
     private String ubicacion;

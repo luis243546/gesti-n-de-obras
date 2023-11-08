@@ -18,7 +18,6 @@ import lombok.Setter;
 @Table(name="obrero")
 @NoArgsConstructor
 public abstract class Obrero extends BaseEntity { 
-    private int idObrero;
     private String nombre;
     private String apellidos;
     private String telefono;

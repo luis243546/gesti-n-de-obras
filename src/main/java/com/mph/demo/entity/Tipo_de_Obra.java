@@ -15,7 +15,6 @@ import lombok.Setter;
 @NoArgsConstructor
 public abstract class Tipo_de_Obra extends BaseEntity {
     
-    private int idTipo_de_Obra;
     private String nombre;
     private String descripcion;
 }

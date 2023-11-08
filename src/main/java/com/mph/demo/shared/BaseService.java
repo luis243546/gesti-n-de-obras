@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public abstract class BaseService<T>{
-    @Autowired
+public class BaseService<T>{
+  @Autowired
   private BaseRepository<T> repositoryBase;
 
   public List<T> getAll() {

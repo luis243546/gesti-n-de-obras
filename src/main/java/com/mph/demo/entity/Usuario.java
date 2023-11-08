@@ -16,7 +16,7 @@ import jakarta.persistence.Entity;
 @NoArgsConstructor
 public abstract class Usuario extends BaseEntity {
     
-    private int idUsusario ;
+
     private String nombre;
     private String apellidos;
     private String contraseña;
