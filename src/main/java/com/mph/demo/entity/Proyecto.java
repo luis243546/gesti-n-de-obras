@@ -17,13 +17,11 @@ import lombok.Setter;
 @Entity
 @Table(name="proyecto")
 @NoArgsConstructor
-public abstract class Proyecto extends BaseEntity {
-    private int idProyecto;
+public class Proyecto extends BaseEntity {
     private String nombre;
     private String descripcion;
     private String ubicacion;
     private String presupuesto;  
-
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "usuario_id")
@@ -32,5 +30,4 @@ public abstract class Proyecto extends BaseEntity {
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "tipro_id")
     private Tipo_de_Obra tipo_de_Obra;
-
 }
