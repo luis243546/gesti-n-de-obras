@@ -14,16 +14,11 @@ import jakarta.persistence.Entity;
 @Getter
 @Setter
 @NoArgsConstructor
-public abstract class Usuario extends BaseEntity {
-    
-    private int idUsusario ;
+public class Usuario extends BaseEntity {
     private String nombre;
     private String apellidos;
     private String contraseña;
     private String rol;
-
-
-
 }
 
 
